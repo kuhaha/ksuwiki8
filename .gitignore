@@ -6,8 +6,6 @@
 /wiki/*/*/counter/*.count
 /wiki/*/*/counter/*.db
 
-/wiki/trash/*
-
 /nbproject/**
 /.vscode/
 
