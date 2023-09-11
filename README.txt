@@ -1,4 +1,8 @@
 名前
+    KsuWiki - a multi-site extension of PukiWiki 1.5.4
+      一つのPuwkiWikiシステムインストールで、複数の互いに独立するWikiサイトを管理できる。
+      詳しくは、README.en.KsuWiki.txtをご参照ください。
+
     PukiWiki - 自由にページを追加・削除・編集できるWebページ構築スクリプト
 
     Version 1.5.4

@@ -2,6 +2,8 @@ NOTE: This document become old, needs help
 (2004-08-28)
 ----------------------------------------------
 NAME
+    KsuWiki - a multi-site extension of PukiWiki 1.5.4
+        For details, Please read README.en.KsuWiki.txt
 
     PukiWiki - PHP scripts for Web pages which can be edited by anyone, 
                at any time, from anywhere. 

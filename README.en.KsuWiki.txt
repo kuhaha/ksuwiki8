@@ -14,18 +14,19 @@ NAME
 
 DESCRIPTION
 
-KsuWiki is an enhanced PuwkiWiki by supporting multiple sites under a single 
+KsuWiki is an enhanced PuwkiWiki that supports multiple sites under a single 
 installation.
 
 FEATURES 
 1. Support multiple sites under a single PukiWiki installation
-2. Support 'view' and 'admin' modes 
+2. Support two modes 
   - 'view' mode,  for read only, hide navigation bar and tool bar
-  - 'admin' mode, for edit after login, show navigation bar and tool bar
+  - 'admin' mode, for edit, show navigation bar and tool bar
 3. Provide a site administration tool
 4. Reorganize the layout of files and directories
 
 INSTALL
+
 1. Unzip the package a suitable place,called PKWK_ROOT under DocumentRoot
 2. Enter the PKWK_ROOT, install dependencies by typing
   `$ composer install`
@@ -78,7 +79,7 @@ PKWK_ROOT
     + wiki/
     + wiki.en/
     - .site.yaml
-  + sites/  # NEW !
+  + sites/  # NEW!
     + site1/
       + attach/
       + ...
