@@ -1,6 +1,6 @@
 NAME
 
-    KsuWiki - a Mult-Site extension of PukiWiki
+    KsuWiki - a multi-site extension of PukiWiki 1.5.4
     
     PukiWiki - PHP scripts for Web pages which can be edited by anyone, 
                at any time, from anywhere. 
