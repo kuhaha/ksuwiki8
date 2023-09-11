@@ -19,9 +19,9 @@ installation.
 
 FEATURES 
 1. Support multiple sites under a single PukiWiki installation
-2. Support two modes 
-  - 'view' mode,  for read only, hide navigation bar and tool bar
-  - 'admin' mode, for edit, show navigation bar and tool bar
+2. Support two usage modes 
+  - 'view' mode, for readonly use, hide navigation bar and tool bar
+  - 'edit' mode, for edit, show navigation bar and tool bar
 3. Provide a site administration tool
 4. Reorganize the layout of files and directories
 
@@ -29,10 +29,10 @@ INSTALL
 
 1. Unzip the package a suitable place,called PKWK_ROOT under DocumentRoot
 2. Enter the PKWK_ROOT, install dependencies by typing
-  `$ composer install`
+    composer install
 3. Change permissions and ownership of wiki folders
-   `$ sudo chown -R apache.apache wiki`
-   `$ sudo chmod -R 777 wiki`
+    sudo chown -R apache.apache wiki
+    sudo chmod -R 777 wiki
 4. Access to wiki sites
   (1) View site list
     http://example.jp/ksuwiki/?cmd=site
@@ -40,37 +40,37 @@ INSTALL
     http://example.jp/ksuwiki/site/site1  
 
 DIRECTORY/FILE LAYOUT
-^^^^^^^^^^^^^^^^^^^^^
+
 PKWK_ROOT
 - index.php
 - INSTALL.txt
 - README.txt
 - ...
 - UPDATING.txt
-+ assets/   # NEW !
-  + image/  # MOVED FROM PKWK_ROOT!
-  + skin/   # MOVED FROM PKWK_ROOT!
-    + default/   # NEW !
++ assets/   
+  + image/  
+  + skin/   
+    + default/   
       + pukiwiki.css
       + pukiwiki.skin.php
     - pukiwiki.css
     - pukiwiki.skin.php
-  + snippet/    # NEW ! for snipet plugin
+  + snippet/    # for `snipet` plugin
 + config/
   - en.lang.php
   - ja.lang.php
   - default.ini.php
-  - ksuwiki.ini.php   # NEW !
-  - pukiwiki.ini.php  # UPDATED : update constant definitions
+  - ksuwiki.ini.php   # NEW! 
+  - pukiwiki.ini.php  # UPDATED: update constant definitions
 + lib/
   - auth.php    # UPDATED: enable site login
   - ...
   - init.php    # UPDATED: alter path to '*.ini.php', '*.lang.php' 
-  - ksuwiki.php # NEW !
+  - ksuwiki.php # NEW!
   - ...
   - pukiwiki.php  
 + wiki/
-  + _template/  # MOVED FROM PKWK_ROOT
+  + _template/  
     + attach/
     + backup/
     + cache/
@@ -83,14 +83,14 @@ PKWK_ROOT
     + site1/
       + attach/
       + ...
+      + wiki/
       + wiki.en/
-
       - .site.yaml
     + site2/
       + attach/
       + ...
+      + wiki/
       + wiki.en/
-
       - .site.yaml
 
 HOW DOES IT WORK?
@@ -121,7 +121,7 @@ B. Other Optimization
   (1) Move all static content to 'assets/' directory
   (2) Move all '*.ini.php' and '*.lang.php' to 'config' directory
 
-C. New PHP scripts and related files for KsuWiki
+C. New/updated PHP scripts and files for KsuWiki
   (1) DATA_HOME . 'index.php' (updated, add new definitions and require statement), 
     '.htaccess'(updated, add rewrite rules), 'composer.json'(new)
   (2) DATA_HOME . 'ksuwiki.ini.php'(new, for site initialization)
@@ -133,7 +133,9 @@ C. New PHP scripts and related files for KsuWiki
   (6) SKIN . 'default/' (new, per-site skin files)
  
   (7) New Contants
-    PKWK_HOME, WIKI_DIR, CONF_DIR,
+    PKWK_HOME
+    WIKI_DIR
+    CONF_DIR,
     SITE_ID, SITE_TITLE, SITE_URL, SITE_ADMIN,
     PKWK_SKIN_SHOW_FOOTER (in 'pukiwiki.skin.php') 
 
@@ -143,13 +145,14 @@ C. Dependencies
 
 D. Site administration
   A new plugin named 'site' is provided for site administration.
-  URL                     | Comment
-  -------------------------------  
-  ?cmd=site                | list all sites 
-  ?cmd=site&act=new        | create a new site from template
-  ?cmd=site&act=setup&site_id=site1     |  modify config of site1
-  ?cmd=site&act=delete&site_id=site1    |  delete site1
-  ?cmd=site&act=copy&site_id=site1      |  create a new site from site1 
-  ?cmd=site&act=passwd&site_id=site1    |  change password of site1
-  ?cmd=site&act=login      |  login as administrator
-  ?cmd=site&act=logout     |  logout as administrator
+  --------------------------------------------------------------------  
+  URL                                 | Comment
+  --------------------------------------------------------------------  
+  ?cmd=site                           | list all sites 
+  ?cmd=site&act=new                   | create a new site from template
+  ?cmd=site&act=copy&site_id=site1    | create a new site from site1 
+  ?cmd=site&act=delete&site_id=site1  | delete site1
+  ?cmd=site&act=setup&site_id=site1   | modify config of site1
+  ?cmd=site&act=passwd&site_id=site1  | change password of site1
+  ?cmd=site&act=login                 | login as administrator
+  ?cmd=site&act=logout                | logout as administrator
