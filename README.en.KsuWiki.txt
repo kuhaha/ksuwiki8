@@ -18,10 +18,11 @@ KsuWiki is an enhanced PuwkiWiki that supports multiple sites under a single
 installation.
 
 FEATURES 
+
 1. Support multiple sites under a single PukiWiki installation
 2. Support two usage modes 
   - 'view' mode, for readonly use, hide navigation bar and tool bar
-  - 'edit' mode, for edit, show navigation bar and tool bar
+  - 'edit' mode, for edit (after login), show navigation bar and tool bar
 3. Provide a site administration tool
 4. Reorganize the layout of files and directories
 
