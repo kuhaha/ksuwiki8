@@ -1,10 +1,10 @@
-/wiki/*/*/attach/*.[0-9]
-/wiki/*/*/attach/*.log
-/wiki/*/*/backup/*.gz
-/wiki/*/*/cache/*.ref
-/wiki/*/*/cache/*.rel
-/wiki/*/*/counter/*.count
-/wiki/*/*/counter/*.db
+/wiki/**/attach/*.[0-9]
+/wiki/**/attach/*.log
+/wiki/**/backup/*.gz
+/wiki/**/cache/*.ref
+/wiki/**/cache/*.rel
+/wiki/**/counter/*.count
+/wiki/**/counter/*.db
 
 /nbproject/**
 /.vscode/
