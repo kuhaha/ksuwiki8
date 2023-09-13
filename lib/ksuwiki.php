@@ -40,12 +40,11 @@ function site_auth($site, $password)
         $_SESSION['authenticated_site'] = $site;
         return true;
     }
-	return false;
+    return false;
 }
 
 function site_authed($site)
 {
-    session_start();
     return isset($_SESSION['authenticated_site']) and $_SESSION['authenticated_site']==$site;
 }
 function site_logout()
