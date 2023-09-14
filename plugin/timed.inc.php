@@ -41,16 +41,15 @@ function plugin_timed_validate($args = array())
 	$_since = $args[0]; 
 	$_until = $args[1];  
 	$_hide  = count($args)>=3 and$args[2]=='hide';
-	$_show = !$_hide;
 	$t = date_create_immutable($_current);
 	$since = date_create_immutable($_since);
 	$until = date_create_immutable($_until);
 	$was_allowed = '&#128586;You are currently allowed to view this page!';
 	$not_allowed = '&#128584;You are currently rejected to view this page!';
-	if ($_show){
-		$body .= ($since<=$t and $t<=$until) ? $was_allowed : $not_allowed; 
-	}else{
+	if ($_hide){
 		$body .= ($since<=$t and $t<=$until) ? $not_allowed : $was_allowed; 
+	}else{
+		$body .= ($since<=$t and $t<=$until) ? $was_allowed : $not_allowed; 
 	}	
 	return '<div style="color:green;font-size:18pt;">' . $body . '</div>';
 }
