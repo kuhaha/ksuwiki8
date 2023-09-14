@@ -1,4 +1,4 @@
--2023-09-15 (金) 00:28:59 - [ &pageaction("FrontPage",diff); | &pageaction("FrontPage",backup); ] [[FrontPage]]
+-2023-09-15 (金) 00:37:17 - [ &pageaction("FrontPage",diff); | &pageaction("FrontPage",backup); ] [[FrontPage]]
 -2023-09-12 (火) 08:22:03 - [ &pageaction("AutoTicketLinkName",diff); | &pageaction("AutoTicketLinkName",backup); ] [[AutoTicketLinkName]]
 -2023-09-12 (火) 08:22:03 - [ &pageaction("BracketName",diff); | &pageaction("BracketName",backup); ] [[BracketName]]
 -2023-09-12 (火) 08:22:03 - [ &pageaction("FormattingRules",diff); | &pageaction("FormattingRules",backup); ] [[FormattingRules]]
