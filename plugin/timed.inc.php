@@ -9,7 +9,7 @@
 // timed plugin - show/hide content according to specified schedule 
 
 // Show usage
-function plugin_timed_usage($message = '')
+function plugin_timed_feedback($message = '')
 {
 	if ($message == '') {
 		return '#timed(since,until[,hide])' . '<br />';
@@ -22,48 +22,39 @@ function plugin_timed_usage($message = '')
 function plugin_timed_convert()
 {
 	if (func_num_args() < 1)
-		return plugin_timed_usage();
+		return plugin_timed_feedback();
 
-	return plugin_timed_tag(func_get_args());
+	return plugin_timed_validate(func_get_args());
 }
 
 // Timed plugin itself
-function plugin_timed_tag($args = array())
+function plugin_timed_validate($args = array())
 {
 	global $vars;
-	if (empty($args) || $args[0] == '') return plugin_aname_usage();
-
+	if (count($args)<2 || $args[0] == '' || $args[1] == '') {
+		return plugin_timed_feedback();
+	}
+	$args = array_map('_trim', $args);
 	$body = '';
 	$_format = 'Y-m-d H:i:s';
 	$_current = date($_format);
-	$_future = date($_format, mktime(0,0,0,1,1,date('Y')+ 10));
-	$_since = _get('since', $args, $_current); 
-	$_until = _get('unti', $args, $_future);  
-	$_show  = ! in_array('hide', $args); 
-
-	$t_current = date_create_immutable($_current);
-	$t_since = date_create_immutable($_since);
-	$t_until = date_create_immutable($_until);
-	//DEBUG
-	// echo $t_current->format($_format), PHP_EOL;
-	// echo $t_since->format($_format), PHP_EOL;
-	// echo $t_until->format($_format), PHP_EOL;
-
-	$valid1 = $_current and $_since and ($_current >= $_since);
-	$valid2 = $_current and $_until and ($_current <= $_until);
-	if ($valid1 and $valid2 and !$_show){
-		return 'Forbidden to view this page!';
+	$_since = $args[0]; 
+	$_until = $args[1];  
+	$_hide  = count($args)>=3 and$args[2]=='hide';
+	$_show = !$_hide;
+	$t = date_create_immutable($_current);
+	$since = date_create_immutable($_since);
+	$until = date_create_immutable($_until);
+	$was_allowed = '&#128586;You are currently allowed to view this page!';
+	$not_allowed = '&#128584;You are currently rejected to view this page!';
+	if ($_show){
+		$body .= ($since<=$t and $t<=$until) ? $was_allowed : $not_allowed; 
 	}else{
-		return 'Allowed to view this page';
-	}
-
-
+		$body .= ($since<=$t and $t<=$until) ? $not_allowed : $was_allowed; 
+	}	
+	return '<div style="color:green;font-size:18pt;">' . $body . '</div>';
 }
 
-function _get($option, $args, $default=null){
-	if (isset($args[$option])){
-		return $args[$option];
-	}else{
-		return $default;
-	}
+function _trim($string){
+	return trim(trim($string),"'\""); 
 }
