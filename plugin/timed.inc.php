@@ -26,18 +26,12 @@ function plugin_timed_feedback($message = '')
 // #timed
 function plugin_timed_convert()
 {
+	global $_timed_messages;
+
 	if (func_num_args() < 2)
 		return plugin_timed_feedback();
-
-	return plugin_timed_validate(func_get_args());
-}
-
-// Timed plugin itself
-function plugin_timed_validate($args = array())
-{
-	global $vars, $_timed_messages;
-	$args = array_map('_trim', $args);
-	$body = '';
+	
+	$args = array_map('_trim', func_get_args());
 	$t = date_create_immutable();
 	$since = date_create_immutable($args[0]);
 	$until = date_create_immutable($args[1]);
@@ -47,12 +41,11 @@ function plugin_timed_validate($args = array())
 	}else{
 		$show = ($since<=$t and $t<=$until); 
 	}
-	$duration = ($show) ? $_timed_messages['msg_visible_during'] : $_timed_messages['msg_invisible_during'];
+	$duration = ($hide) ? $_timed_messages['msg_invisible_during'] : $_timed_messages['msg_visible_during'];
 	$duration .= ': ' . $since->format('Y/m/d H:i:s') . ' ~ ' . $until->format('Y/m/d H:i:s'); 
-	if ($show) 
-		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] .'<div>'. $duration. '</div></div>'; 
-	else	
-		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] .'<div>'. $duration. '</div></div>'); 	
+	if ($show) return '';
+	_die('<div style="color:red;font-size:14pt;">' . $_timed_messages['msg_invisible'] . '</div>'
+		. '<div style="font-size:12pt;text-indent:30px;">'. $duration . '</div>'); 	
 }
 
 function _trim($string){
