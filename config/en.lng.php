@@ -488,3 +488,10 @@ $_site_messages = array(
 	'passwd_invalid'  => 'Passwords not match',
 
 );
+
+///////////////////////////////////////
+// timed.inc.php
+$_timed_messages = array(
+	'invisible' => '&#128584;Timed Page: You are currently not allwed to access this page!',
+	'visible' 	=> '&#128586;Timed Page: You are currently allowed to access this page!',
+);

@@ -495,3 +495,10 @@ $_site_messages = array(
 	'passwd_notmatch'  => 'パスワードが一致しません。',
 
 );
+
+///////////////////////////////////////
+// timed.inc.php
+$_timed_messages = array(
+	'invisible' => '&#128584;このページは期間外ではご覧になれません!',
+	'visible' 	=> '&#128586;このページは現在閲覧できます!',
+);

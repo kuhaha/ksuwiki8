@@ -53,3 +53,4 @@ function site_logout()
     session_regenerate_id(true); // require: PHP5.1+
     session_destroy();
 }
+
