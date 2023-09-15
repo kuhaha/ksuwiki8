@@ -6,7 +6,8 @@
 //   2001-2002 Originally written by yu-ji
 // License: GPL v2 or (at your option) any later version
 //
-// timed plugin - show/hide content according to specified schedule 
+// timed plugin - show/hide content according to specified schedule, e.g., 
+// #timed('2023-9-16 12:45:12','2023-10-1 12:21:21',hide)
 
 // Show usage
 function plugin_timed_feedback($message = '')
