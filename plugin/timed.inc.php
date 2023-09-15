@@ -47,10 +47,11 @@ function plugin_timed_validate($args = array())
 	}else{
 		$show = ($since<=$t and $t<=$until); 
 	}
+	$duration = ($show ? 'Allow' :'Forbidden') . ' to access during ' . $since->format('Y/m/d H:i:s') . ' ~ ' . $until->format('Y/m/d H:i:s'); 
 	if ($show) 
-		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] . '</div>';
+		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] . '</div>'; //. $duration;
 	else	
-		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] . '</div>');
+		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] . '</div>'); //. $duration);
 	
 }
 
@@ -62,7 +63,7 @@ function _die($msg)
 {
 	$title = $page = 'Timed page' ;
 	$body = <<<EOD
-<h3>TimedPage: 時間限定公開ページ</h3>
+<h3>Timed Page</h3>
 <strong>$msg</strong>
 EOD;
 
