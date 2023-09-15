@@ -20,15 +20,22 @@ installation.
 FEATURES 
 
 1. Support multiple sites under a single PukiWiki installation
+
 2. Support two usage modes 
   - 'view' mode, for readonly use, hide navigation bar and tool bar
   - 'edit' mode, for edit (after login), show navigation bar and tool bar
-3. Provide a site administration tool
+
+3. New plugins 
+  - site.inc.php: a site administration tool
+  - timed.inc.php: scheduled page access
+  - snippet.inc.php: source code syntax-highlighting
+
 4. Reorganize the layout of files and directories
+
 
 INSTALL
 
-1. Unzip the package a suitable place,called PKWK_ROOT under DocumentRoot
+1. Unzip the package to any folder, called PKWK_ROOT, under DocumentRoot 
 2. Enter the PKWK_ROOT, install dependencies by typing
     composer install
 3. Change permissions and ownership of wiki folders
