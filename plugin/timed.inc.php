@@ -48,9 +48,9 @@ function plugin_timed_validate($args = array())
 		$show = ($since<=$t and $t<=$until); 
 	}
 	if ($show) 
-		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['visible'] . '</div>';
+		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] . '</div>';
 	else	
-		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['invisible'] . '</div>');
+		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] . '</div>');
 	
 }
 

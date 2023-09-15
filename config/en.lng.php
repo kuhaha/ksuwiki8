@@ -492,6 +492,6 @@ $_site_messages = array(
 ///////////////////////////////////////
 // timed.inc.php
 $_timed_messages = array(
-	'invisible' => '&#128584;You are currently not allwed to access this page!',
-	'visible' 	=> '&#128586;You are currently allowed to access this page!',
+	'msg_invisible' => '&#128584;You are currently not allwed to access this page!',
+	'msg_visible' 	=> '&#128586;You are currently allowed to access this page!',
 );
