@@ -27,7 +27,7 @@ FEATURES
 
 3. New plugins 
   - site.inc.php: site administration
-  - timed.inc.php: allow/forbid scheduled page access
+  - timed.inc.php: allow scheduled page access
   - snippet.inc.php: syntax-highlight source code
 
 4. Reorganize the layout of files and directories
