@@ -47,12 +47,12 @@ function plugin_timed_validate($args = array())
 	}else{
 		$show = ($since<=$t and $t<=$until); 
 	}
-	$duration = ($show ? 'Allow' :'Forbidden') . ' to access during ' . $since->format('Y/m/d H:i:s') . ' ~ ' . $until->format('Y/m/d H:i:s'); 
+	$duration = ($show) ? $_timed_messages['msg_visible_during'] : $_timed_messages['msg_invisible_during'];
+	$duration .= ': ' . $since->format('Y/m/d H:i:s') . ' ~ ' . $until->format('Y/m/d H:i:s'); 
 	if ($show) 
-		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] . '</div>'; //. $duration;
+		return '<div style="color:green;font-size:16pt;">' . $_timed_messages['msg_visible'] .'<div>'. $duration. '</div></div>'; 
 	else	
-		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] . '</div>'); //. $duration);
-	
+		_die('<div style="color:blue;font-size:16pt;">' . $_timed_messages['msg_invisible'] .'<div>'. $duration. '</div></div>'); 	
 }
 
 function _trim($string){
