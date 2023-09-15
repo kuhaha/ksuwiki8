@@ -21,7 +21,7 @@ function plugin_timed_feedback($message = '')
 // #timed
 function plugin_timed_convert()
 {
-	if (func_num_args() < 1)
+	if (func_num_args() < 2)
 		return plugin_timed_feedback();
 
 	return plugin_timed_validate(func_get_args());
@@ -31,22 +31,15 @@ function plugin_timed_convert()
 function plugin_timed_validate($args = array())
 {
 	global $vars;
-	if (count($args)<2 || $args[0] == '' || $args[1] == '') {
-		return plugin_timed_feedback();
-	}
 	$args = array_map('_trim', $args);
 	$body = '';
-	$_format = 'Y-m-d H:i:s';
-	$_current = date($_format);
-	$_since = $args[0]; 
-	$_until = $args[1];  
-	$_hide  = count($args)>=3 and$args[2]=='hide';
-	$t = date_create_immutable($_current);
-	$since = date_create_immutable($_since);
-	$until = date_create_immutable($_until);
+	$t = date_create_immutable();
+	$since = date_create_immutable($args[0]);
+	$until = date_create_immutable($args[1]);
+	$hide  = count($args)>=3 and $args[2]=='hide';
 	$was_allowed = '&#128586;You are currently allowed to view this page!';
 	$not_allowed = '&#128584;You are currently not allwed to view this page!';
-	if ($_hide){
+	if ($hide){
 		$body .= ($since<=$t and $t<=$until) ? $not_allowed : $was_allowed; 
 	}else{
 		$body .= ($since<=$t and $t<=$until) ? $was_allowed : $not_allowed; 
