@@ -84,17 +84,17 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
  <title><?php echo $title ? $title:'KsuWiki' ?> - <?php echo $page_title ?></title>
 
  <link rel="SHORTCUT ICON" href="<?php echo $image['favicon'] ?>" />
- <link rel="stylesheet" type="text/css" href="<?=PKWK_HOME.SKIN_DIR?>pukiwiki.css" />
+ <link rel="stylesheet" type="text/css" href="<?=PKWK_ROOT.SKIN_DIR?>pukiwiki.css" />
  <link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo $link['rss'] ?>" /><?php // RSS auto-discovery ?>
- <script type="text/javascript" src="<?=PKWK_HOME?>assets/skin/main.js" defer></script>
- <script type="text/javascript" src="<?=PKWK_HOME?>assets/skin/search2.js" defer></script>
+ <script type="text/javascript" src="<?=PKWK_ROOT?>assets/skin/main.js" defer></script>
+ <script type="text/javascript" src="<?=PKWK_ROOT?>assets/skin/search2.js" defer></script>
 
 <?php echo $head_tag ?>
 </head>
 <body>
 <?php echo $html_scripting_data ?>
 <div id="header">
- <a href="<?php echo $link['top'] ?>"><img id="logo" src="<?php echo PKWK_HOME.SKIN_DIR.$image['logo'] ?>" height="80" alt="[PukiWiki]" title="[PukiWiki]" /></a>
+ <a href="<?php echo $link['top'] ?>"><img id="logo" src="<?php echo PKWK_ROOT.SKIN_DIR.$image['logo'] ?>" height="80" alt="[PukiWiki]" title="[PukiWiki]" /></a>
 
  <h1 class="title"><?php echo $page_title ?></h1>
 

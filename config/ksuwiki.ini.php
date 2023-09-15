@@ -17,7 +17,7 @@ $router->run();
 function initialize_site($site)
 {
     define('SITE_ID', $site);// TODO: check validity of $site - is there a full set of site data   
-    define('SITE_URL', PKWK_HOME .'site/'. $site . '/'); 
+    define('SITE_URL', PKWK_ROOT .'site/'. $site . '/'); 
     foreach( [
         'DATA_DIR'=>'wiki/',
         'DIFF_DIR'=>'diff/',

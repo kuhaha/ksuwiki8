@@ -57,7 +57,7 @@ if (arg_check('read') && exist_plugin_convert('rightbar')) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<?php if ($nofollow || ! $is_read)  { ?> <meta name="robots" content="NOINDEX,NOFOLLOW" /><?php } ?>
 	<?php if ($html_meta_referrer_policy) { ?> <meta name="referrer" content="<?php echo htmlsc(html_meta_referrer_policy) ?>" /><?php } ?>
-	<link rel="stylesheet" href="<?=PKWK_HOME.SKIN_DIR?>default.ja.css" type="text/css" media="screen,print" charset="Shift_JIS" />
+	<link rel="stylesheet" href="<?=PKWK_ROOT.SKIN_DIR?>default.ja.css" type="text/css" media="screen,print" charset="Shift_JIS" />
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo $link['rss'] ?>" /><?php // RSS auto-discovery ?>
 	<title><?php echo "$title - $page_title" ?></title>
 	<script type="text/javascript">
@@ -73,15 +73,15 @@ if (arg_check('read') && exist_plugin_convert('rightbar')) {
 
 			if(host_Check == -1){
 				document.links[i].innerHTML = document.links[i].innerHTML 
-				+ "<img src=\"<?=PKWK_HOME.SKIN_DIR?>external_link.gif\" height=\"11px\" width=\"11px\" alt=\"[紊・・・・・・潟・・\" class=\"external_link\">";
+				+ "<img src=\"<?=PKWK_ROOT.SKIN_DIR?>external_link.gif\" height=\"11px\" width=\"11px\" alt=\"[紊・・・・・・潟・・\" class=\"external_link\">";
 			}
 
 		}
 	}
 	window.onload = external_link;
 	</script>
-	<script type="text/javascript" src="<?=PKWK_HOME?>assets/skin/main.js" defer></script>
-	<script type="text/javascript" src="<?=PKWK_HOME?>assets/skin/search2.js" defer></script>
+	<script type="text/javascript" src="<?=PKWK_ROOT?>assets/skin/main.js" defer></script>
+	<script type="text/javascript" src="<?=PKWK_ROOT?>assets/skin/search2.js" defer></script>
 	<?php echo $head_tag ?>
 </head>
 <body>

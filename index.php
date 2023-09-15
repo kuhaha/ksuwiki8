@@ -22,11 +22,12 @@ define('LIB_DIR',	'lib/');
 # KsuWiki BEGIN
 date_default_timezone_set('Asia/Tokyo');
 define('CONF_DIR',	'config/');
-define('PKWK_HOME', dirname($_SERVER['PHP_SELF']) .'/');
+define('PKWK_ROOT', dirname($_SERVER['PHP_SELF']) .'/');
 require(CONF_DIR . 'ksuwiki.ini.php');
 if (!defined('SITE_ADMIN') or !SITE_ADMIN ){
     define('PKWK_READONLY',  1);
 }
 # KsuWiki END
+
 require(LIB_DIR . 'pukiwiki.php');
 ?>

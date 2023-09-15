@@ -136,7 +136,7 @@ C. New/updated PHP scripts and files for KsuWiki
   (6) SKIN . 'default/' (new, per-site skin files)
  
   (7) New Contants
-    PKWK_HOME
+    PKWK_ROOT
     WIKI_DIR
     CONF_DIR,
     SITE_ID, SITE_TITLE, SITE_URL, SITE_ADMIN,

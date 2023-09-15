@@ -299,10 +299,10 @@ function _site_save($act='modify'){
 function _img_link($img,  $title, $site, $act){
   $url = '?cmd=site&act='.$act. '&site_id='.$site;
   if ($act == 'view'){
-    $url = PKWK_HOME . 'site/' . $site;
+    $url = PKWK_ROOT . 'site/' . $site;
   }
   if ($act == 'edit'){
-    $url = PKWK_HOME . 'site/' . $site;
+    $url = PKWK_ROOT . 'site/' . $site;
     if (!site_authed($site)){
       $url .= '?cmd=site&act=login';
     }
