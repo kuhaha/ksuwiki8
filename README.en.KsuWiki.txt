@@ -26,9 +26,9 @@ FEATURES
   - 'edit' mode, for edit (after login), show navigation bar and tool bar
 
 3. New plugins 
-  - site.inc.php: a site administration tool
-  - timed.inc.php: scheduled page access
-  - snippet.inc.php: source code syntax-highlighting
+  - site.inc.php: site administration
+  - timed.inc.php: allow/forbid scheduled page access
+  - snippet.inc.php: syntax-highlight source code
 
 4. Reorganize the layout of files and directories
 
@@ -58,11 +58,6 @@ PKWK_ROOT
 + assets/   
   + image/  
   + skin/   
-    + default/   
-      + pukiwiki.css
-      + pukiwiki.skin.php
-    - pukiwiki.css
-    - pukiwiki.skin.php
   + snippet/    # for `snipet` plugin
 + config/
   - en.lang.php
