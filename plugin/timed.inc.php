@@ -35,7 +35,7 @@ function plugin_timed_convert()
 	$t = date_create_immutable();
 	$since = date_create_immutable($args[0]);
 	$until = date_create_immutable($args[1]);
-	$hide  = count($args)>=3 and $args[2]=='hide';
+	$hide  = (count($args)>=3 and $args[2]=='hide');
 	if ($hide){
 		$show = !($since<=$t and $t<=$until); 
 	}else{

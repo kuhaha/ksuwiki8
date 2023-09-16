@@ -501,6 +501,6 @@ $_site_messages = array(
 $_timed_messages = array(
 	'msg_visible' 	=> '&#128586;このページは現在閲覧できます!',
 	'msg_visible_during'	=> '閲覧可能期間',
-	'msg_invisible' => '&#128584;このページは現在閲覧禁止です!',
+	'msg_invisible' => '&#128584;このページは公開スケジュールにより現在閲覧できません!',
 	'msg_invisible_during'	=> '閲覧不可期間',
 );

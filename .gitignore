@@ -3,6 +3,7 @@
 /wiki/**/backup/*.gz
 /wiki/**/cache/*.ref
 /wiki/**/cache/*.rel
+/wiki/**/cache/*.dat
 /wiki/**/counter/*.count
 /wiki/**/counter/*.db
 
