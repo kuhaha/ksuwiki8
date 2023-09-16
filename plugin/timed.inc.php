@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone
-// aname.inc.php
+// timed.inc.php
 // Copyright
 //   2002-2020 PukiWiki Development Team
 //   2001-2002 Originally written by yu-ji
@@ -9,12 +9,12 @@
 // timed plugin - show/hide content according to specified schedule, 
 // #timed(since,until[,hide])
 // since, until - datetime, in format acceptable by DateTime()
-// hide - if given, page will be invisible during [since, until]  
-// e.g., 
+// hide - if given, page will be invisible or otherwise visible during [since, until] e.g.,
+// 
 // #timed('2023-9-16 12:45:12','2023-10-1 12:21:21',hide)
 
 // Show usage
-function plugin_timed_feedback($message = '')
+function plugin_timed_usage($message = '')
 {
 	if ($message == '') {
 		return '#timed(since,until[,hide])' . '<br />';
@@ -29,9 +29,9 @@ function plugin_timed_convert()
 	global $_timed_messages;
 
 	if (func_num_args() < 2)
-		return plugin_timed_feedback();
+		return plugin_timed_usage();
 	
-	$args = array_map('_trim', func_get_args());
+	$args = array_map('_trim', func_get_args()); 
 	$t = date_create_immutable();
 	$since = date_create_immutable($args[0]);
 	$until = date_create_immutable($args[1]);
