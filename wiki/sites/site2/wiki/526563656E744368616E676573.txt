@@ -1,5 +1,5 @@
--2023-09-16 (土) 13:42:03 - [ &pageaction("PukiWiki/1.4/Manual/Plugin/S-U",diff); | &pageaction("PukiWiki/1.4/Manual/Plugin/S-U",backup); ] [[PukiWiki/1.4/Manual/Plugin/S-U]]
--2023-09-16 (土) 13:41:33 - [ &pageaction("TimedPage",diff); | &pageaction("TimedPage",backup); ] [[TimedPage]]
+-2023-09-16 (土) 13:47:20 - [ &pageaction("TimedPage",diff); | &pageaction("TimedPage",backup); ] [[TimedPage]]
+-2023-09-16 (土) 13:46:50 - [ &pageaction("PukiWiki/1.4/Manual/Plugin/S-U",diff); | &pageaction("PukiWiki/1.4/Manual/Plugin/S-U",backup); ] [[PukiWiki/1.4/Manual/Plugin/S-U]]
 -2023-09-16 (土) 13:34:24 - [ &pageaction("TimedPage2",diff); | &pageaction("TimedPage2",backup); ] [[TimedPage2]]
 -2023-09-16 (土) 13:33:39 - [ &pageaction("TimedPage1",diff); | &pageaction("TimedPage1",backup); ] [[TimedPage1]]
 -2023-09-16 (土) 11:54:53 - [ &pageaction("FrontPage",diff); | &pageaction("FrontPage",backup); ] [[FrontPage]]
