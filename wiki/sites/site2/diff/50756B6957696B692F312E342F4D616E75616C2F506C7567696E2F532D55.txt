@@ -1,5 +1,5 @@
--#author("2023-09-17T11:16:49+09:00","","")
-+#author("2023-09-17T11:20:37+09:00","","")
+-#author("2023-09-17T11:20:37+09:00","","")
++#author("2023-09-17T11:32:25+09:00","","")
  #nofollow
  #norelated
  #navi(../)
@@ -120,10 +120,8 @@
  ~★★★★☆
  :書式|
  ''?cmd=site''
--[,&color(blue){&act=new|copy|setup|delete|passwd|login|logout};
--[,&color(blue){&site_id=サイトID};]]
-+[&color(blue){&act=new|copy|setup|delete|passwd|login|logout};
-+[&color(blue){&site_id=サイトID};]]
+ [&color(blue){&act=new|copy|setup|delete|passwd|login|logout};
+ [&color(blue){&site_id=サイトID};]]
  
  :概要|
  ~サイトの一覧(list)、新規作成(new)、コピー(copy)、設定変更(setup)、削除(delete)、パスワード変更(passwd)、ログイン(login)、ログアウト(logout)等、サイトの管理を行います。
@@ -179,7 +177,8 @@
  :概要|
  ~ページ何、ソースコードをシンタックスハイライトします。
  :引数|
- ~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、ACE(https://ace.c9.io/)でサポートする言語に対応しています。
+-~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、ACE(https://ace.c9.io/)でサポートする言語に対応しています。
++~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、[[ACE>https://ace.c9.io/]]でサポートする言語に対応しています。
  :設定|
  --PKWKEXP_DISABLE_MULTILINE_PLUGIN_HACKを0にする必要があります。
  
