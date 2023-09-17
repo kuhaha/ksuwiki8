@@ -1,5 +1,5 @@
--#author("2023-09-17T11:20:37+09:00","","")
-+#author("2023-09-17T11:32:25+09:00","","")
+-#author("2023-09-17T11:32:25+09:00","","")
++#author("2023-09-17T11:37:16+09:00","","")
  #nofollow
  #norelated
  #navi(../)
@@ -175,10 +175,10 @@
  ソースコード&br;
  }}
  :概要|
- ~ページ何、ソースコードをシンタックスハイライトします。
+-~ページ何、ソースコードをシンタックスハイライトします。
++~ソースコードをシンタックスハイライトします。
  :引数|
--~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、ACE(https://ace.c9.io/)でサポートする言語に対応しています。
-+~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、[[ACE>https://ace.c9.io/]]でサポートする言語に対応しています。
+ ~言語、ソースコードの言語をしています。php，python，java，javascript，html，css，ruby等、[[ACE>https://ace.c9.io/]]でサポートする言語に対応しています。
  :設定|
  --PKWKEXP_DISABLE_MULTILINE_PLUGIN_HACKを0にする必要があります。
  
