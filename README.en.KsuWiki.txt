@@ -98,9 +98,9 @@ PKWK_ROOT
 
 HOW DOES IT WORK?
 
-A. Store data for different sites in separate directories 
+A. Store all data for different sites in separate directories 
   A.1. Create 'sites' and '_template' directories under 'wiki/'
-  A.2. Move a set of directories for original wiki site to 'wiki/_template/', as template for creating new sites 
+  A.2. Move original wiki site to 'wiki/_template/', used as template for creating new sites 
     attach/, backup/, cache/, counter/, diff/, wiki, wiki.en/
   A.3. Create a directory for each site (e.g., site1) under 'wiki/sites/' 　 
     attach/, backup/, cache/, counter/, diff/, wiki, wiki.en/
@@ -125,22 +125,21 @@ B. Other Optimization
   (2) Move all '*.ini.php' and '*.lang.php' to 'config' directory
 
 C. New/updated PHP scripts and files for KsuWiki
-  (1) DATA_HOME . 'index.php' (updated, add new definitions and require statement), 
-    '.htaccess'(updated, add rewrite rules), 'composer.json'(new)
-  (2) DATA_HOME . 'ksuwiki.ini.php'(new, for site initialization)
-    'pukiwiki.ini.php' (updated, add site-related definition)
-  (3) LIB . 'ksuwiki.php'(new, functions specially implemented for KsuWiki)
-  (4) LIB . 'auth.php' (updated, allow site login)
-  (5) PLUGIN . 'site.ini.php' (new, plugin for site administration!)
-    'snippet.inc.php' (new, plugin for code syntax-highlight)
-  (6) SKIN . 'default/' (new, per-site skin files)
- 
-  (7) New Contants
-    PKWK_ROOT
-    WIKI_DIR
-    CONF_DIR,
+  (1) New Contants
+    PKWK_ROOT, WIKI_DIR, CONF_DIR,
     SITE_ID, SITE_TITLE, SITE_URL, SITE_ADMIN,
     PKWK_SKIN_SHOW_FOOTER (in 'pukiwiki.skin.php') 
+  (2) DATA_HOME . 'index.php' (updated, add new definitions and require statement), 
+     DATA_HOME . '.htaccess'(updated, add rewrite rules), 'composer.json'(new)
+  (3) CONF_DIR. 'ksuwiki.ini.php'(new, for site initialization)
+     CONF_DIR . 'pukiwiki.ini.php' (updated, add site-related definition)
+  (4) LIB . 'ksuwiki.php'(new, functions specially implemented for KsuWiki)
+  (5) LIB . 'auth.php' (updated, allow site login)
+  (6) PLUGIN_DIR . 'site.ini.php' (new plugin for site administration)
+    PLUGIN_DIR . 'snippet.inc.php' (new plugin for code syntax-highlighting)
+    PLUGIN_DIR . 'timed.inc.php' (new plugin for scheduled page access)
+  (7) New skins
+     DATA_HOME . 'skin/' . [default | ksu | modern | blue-box | orange-box]
 
 C. Dependencies
  (1) symfony/yaml
