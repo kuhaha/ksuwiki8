@@ -26,11 +26,11 @@ FEATURES
   - 'edit' mode, for edit (after login), show navigation bar and tool bar
 
 3. New plugins 
-  - site.inc.php: site administration
-  - timed.inc.php: allow scheduled page access
+  - site.inc.php: a site administration tool
+  - timed.inc.php: enable scheduled page access
   - snippet.inc.php: syntax-highlight source code
 
-4. Reorganize the layout of files and directories
+4. Reorganized layout of files and directories
 
 
 INSTALL
