@@ -36,8 +36,7 @@ function initialize_site($site)
             define('SKIN_DIR', 'assets/skin/' . $config['skin'] . '/');
             define('SITE_TITLE', $config['title']);
             session_start();
-            $site_admin = isset($_SESSION['authenticated_site']) 
-                and $_SESSION['authenticated_site']===$site;
+            $site_admin = (isset($_SESSION['authenticated_site']) and $_SESSION['authenticated_site']===$site);
         }
     }
     define('SITE_ADMIN', $site_admin);
