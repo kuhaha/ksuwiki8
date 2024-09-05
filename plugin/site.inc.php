@@ -1,8 +1,7 @@
 <?php
 // PLugin for site management
-// site plugin (cmd=site)
-// or (cmd=site&act=<act>)
-// <act>= new|copy|modify|delete|list|passwd
+// site plugin (cmd=site or cmd=site&act=<act>)
+// <act>= new|copy|modify|delete|list|passwd, default `list`
 
 function plugin_site_action(){
   global $vars;
@@ -23,6 +22,11 @@ function plugin_site_action(){
   $act = 'list';
   if (isset($vars['act']) and in_array($vars['act'], $actions)){
     $act = $vars['act'];
+  }
+
+  $is_admin = defined('SITE_ADMIN') ? SITE_ADMIN : false;
+  if ($act !='login' and !$is_admin){
+    die_message("PKWK_READONLY prohibits '{$act}'");
   }
 
   if($act == 'list'){
